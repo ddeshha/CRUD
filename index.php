@@ -31,12 +31,14 @@ $students = json_decode(file_get_contents("user.json", true));
                     </thead>
                     <tbody>
                         <?php foreach ($students as $key => $student) :
+                        // print_r($student);
+                        // die();
           ?>
                         <tr>
                             <th scope="row"><?= $key + 1 ?></th>
-                            <td><?= $student['email'] ?></td>
-                            <td><?= $student['name'] ?></td>
-                            <td><?= $student['password'] ?></td>
+                            <td><?= $student -> name ?></td>
+                            <td><?= $student -> email ?></td>
+                            <td><?= $student -> password?></td>
                             <td>
                                 <a href="#" class="btn btn-info">Edit</a>
                                 <a href="#" class="btn btn-danger">Delete</a>
